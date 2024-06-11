@@ -1,0 +1,7 @@
+{
+  "name": "optimizada",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
