@@ -1,0 +1,23 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Certificaciones</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label>Nombre Certificado</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha de Obtención</ion-label>
+      <ion-datetime></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Certificado Vencimiento</ion-label>
+      <ion-checkbox [(ngModel)]="certificateExpires"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha de Vencimiento</ion-label>
+      <ion-datetime [disabled]="!certificateExpires"></ion-datetime>
+    </ion-item>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,27 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Experiencia Laboral</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label>Empresa</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Año inicio</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Actualmente trabaja ahí</ion-label>
+      <ion-checkbox [(ngModel)]="currentlyWorking"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Año término</ion-label>
+      <ion-input type="number" [disabled]="!currentlyWorking"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cargo</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-card-content>
+</ion-card>

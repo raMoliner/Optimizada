@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">Cerrar sesión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="mis-datos">
+      <ion-label>Mis Datos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="experiencia-laboral">
+      <ion-label>Experiencia Laboral</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="certificaciones">
+      <ion-label>Certificaciones</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ng-container *ngIf="segment === 'mis-datos'">
+    <app-mis-datos></app-mis-datos>
+  </ng-container>
+  <ng-container *ngIf="segment === 'experiencia-laboral'">
+    <app-experiencia-laboral></app-experiencia-laboral>
+  </ng-container>
+  <ng-container *ngIf="segment === 'certificaciones'">
+    <app-certificaciones></app-certificaciones>
+  </ng-container>
+</ion-content>
